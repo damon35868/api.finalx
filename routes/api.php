@@ -3,6 +3,7 @@
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\TestController;
 use App\Http\Controllers\UserController;
+use App\Models\Goods;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -96,3 +97,9 @@ Route::get('/posts/{post}', [PostController::class, 'index']);
 // Route::fallback(function () {
 //     return 'API 404';
 // });
+
+
+
+Route::get('/goods', function () {
+    return Goods::query()->get();
+});

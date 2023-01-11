@@ -21,5 +21,4 @@ Route::get('/', function () {
 });
 
 
-Route::resource('/blog', BlogController::class);
 Route::resource('companies', CompanyController::class);

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\CompanyController;
+use App\Models\Goods;
 use App\Models\Post;
 use Illuminate\Support\Facades\Route;
 
@@ -18,4 +19,9 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+Route::get('/goods', function () {
+    return ['data' => Goods::query()->get()];
 });

@@ -103,3 +103,8 @@ Route::get('/posts/{post}', [PostController::class, 'index']);
 Route::get('/goods', function () {
     return Goods::query()->get();
 });
+
+
+Route::get('/goods2', function () {
+    return ['data' => Goods::query()->get()];
+});
